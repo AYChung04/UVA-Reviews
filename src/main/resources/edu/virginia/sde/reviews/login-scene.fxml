@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="450" prefWidth="350" style="-fx-background-color: #232D4B;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.LoginController">
+   <children>
+      <VBox layoutX="77.0" layoutY="221.0" prefHeight="106.0" prefWidth="196.0">
+         <children>
+            <Label text="Username:" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font></Label>
+            <TextField fx:id="usernameInput" />
+            <Label text="Password:" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="14.0" />
+               </font></Label>
+            <TextField fx:id="passwordInput" />
+            <Label fx:id="loginErrorMessage">
+               <font>
+                  <Font name="SansSerif Regular" size="10.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <Text fill="WHITE" layoutX="75.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" wrappingWidth="83.44336318969727">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Text>
+      <HBox alignment="CENTER" layoutX="75.0" layoutY="343.0" prefHeight="35.0" prefWidth="200.0" spacing="5.0">
+         <children>
+            <Button fx:id="newUserButton" mnemonicParsing="false" onAction="#handleNewUser" prefHeight="25.0" prefWidth="83.0" text="NEW USER" />
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="25.0" prefWidth="81.0" text="LOGIN" />
+         </children>
+      </HBox>
+      <ImageView fx:id="imageView" fitHeight="125.0" fitWidth="350.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+      <Label layoutX="108.0" layoutY="86.0" text="Course Review">
+         <font>
+            <Font name="Elephant" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeButton" layoutX="14.0" layoutY="411.0" mnemonicParsing="false" onAction="#handleClose" text="Close" />
+      <PasswordField fx:id="hiddenPassword" layoutX="77.0" layoutY="278.0" prefHeight="25.0" prefWidth="196.0" />
+      <CheckBox fx:id="toggle" layoutX="239.0" layoutY="320.0" mnemonicParsing="false" onAction="#togglePassword" text="Show/Hide" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </CheckBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.CourseReviewController">
+    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232D4B" height="400.0" stroke="#e16f00" strokeType="INSIDE" strokeWidth="5.0" width="600.0" />
+        <VBox alignment="CENTER" layoutX="75.0" layoutY="66.0" spacing="10">
+            <Label fx:id="averageRatingLabel" text="Average Rating: " textFill="WHITE" />
+
+            <TableView fx:id="reviewsTable" prefHeight="224.0" prefWidth="450.0">
+                <columns>
+                    <TableColumn fx:id="ratingColumn" prefWidth="50.0" text="Rating" />
+                    <TableColumn fx:id="timestampColumn" prefWidth="100.0" text="Timestamp" />
+                    <TableColumn fx:id="commentColumn" prefWidth="300.0" text="Comment" />
+                </columns>
+            </TableView>
+        </VBox>
+      <Button fx:id="addNewReviewButton" layoutX="454.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleAddNewReview" prefHeight="25.0" prefWidth="122.0" text="Add New Review" />
+      <Button fx:id="backToSearchButton" layoutX="39.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleBackToSearchButton" text="Back To Search" />
+        <Button layoutX="315.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="25.0" prefWidth="122.0" text="Edit My Review" />
+      <Label fx:id="errorLabel" layoutX="342.0" layoutY="374.0" prefHeight="17.0" prefWidth="208.0" text="Label" textAlignment="CENTER" textFill="RED" />
+         <Label fx:id="courseInfoLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="27.0" prefHeight="32.0" prefWidth="526.0" text="Course Info" textAlignment="CENTER" textFill="WHITE" maxWidth="526.0">
+         <font>
+            <Font name="Elephant" size="24.0" />
+         </font>
+      </Label>
+    </children>
+
+</AnchorPane>
